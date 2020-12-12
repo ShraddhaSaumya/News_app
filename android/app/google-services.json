@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "157888342468",
+    "firebase_url": "https://flnewslogin.firebaseio.com",
+    "project_id": "flnewslogin",
+    "storage_bucket": "flnewslogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157888342468:android:1d276bf45f578ca9cadc91",
+        "android_client_info": {
+          "package_name": "com.example.api_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157888342468-d6v0ln8sdb6klaenf9tcv5e336255qtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5xXEeZKVRSvK82n7pmtHBjG36ZpYeEfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157888342468-d6v0ln8sdb6klaenf9tcv5e336255qtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
