@@ -11,6 +11,7 @@ class NewsFeed extends StatefulWidget {
 }
 
 int len = 0;
+int abcd;
 var apiResp;
 
 class _NewsFeedState extends State<NewsFeed>
