@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "3dfa88388f5e84f8e8fdc4f6320c8b44",
+      "css": "cricket",
+      "code": 59411,
+      "src": "maki"
+    },
+    {
+      "uid": "032bd8bbd70adf90ead98b6813bfe446",
+      "css": "newspaper",
+      "code": 61930,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "79e8d1abf94974745fff7fe23cfa4c28",
+      "css": "local_movies",
+      "code": 59392,
+      "src": "material"
+    },
+    {
+      "uid": "0357f7abbc0babf43509669f332e41e6",
+      "css": "mobile",
+      "code": 61707,
+      "src": "fontawesome"
+    }
+  ]
+}
