@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:api_call/Widgets/bottomNavBar.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import '../Widgets/Drawer.dart';
@@ -11,7 +12,6 @@ class NewsFeed extends StatefulWidget {
 }
 
 int len = 0;
-int abcd;
 var apiResp;
 
 class _NewsFeedState extends State<NewsFeed>
@@ -38,7 +38,7 @@ class _NewsFeedState extends State<NewsFeed>
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            bottomNavigationBar: NewsNavBar(_tabController),
+            bottomNavigationBar: CustomBottomNavigationBar(_tabController),
             appBar: AppBar(
               actions: <Widget>[
                 IconButton(

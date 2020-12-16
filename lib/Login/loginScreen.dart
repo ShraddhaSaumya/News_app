@@ -28,8 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
       fuser = userCred.user;
       print(fuser);
       _toast("Login Successful");
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => NewsFeed()));
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => NewsFeed()),
+          ModalRoute.withName("/Home"));
     } else {
       _toast("Login Failed");
     }
