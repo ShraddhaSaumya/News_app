@@ -45,13 +45,13 @@ class _HomePageState extends State<HomePage> {
           ),
           centerTitle: true,
         ),
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.white,
         body: ListView(
           padding: EdgeInsets.only(left: 70, right: 70),
           children: <Widget>[
             SizedBox(height: 100),
             CircleAvatar(
-              backgroundColor: Colors.blue.shade100,
+              backgroundColor: Colors.white,
               radius: 54,
               child: Image.asset(
                 "assets/login.png",

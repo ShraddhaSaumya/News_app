@@ -34,13 +34,13 @@ class _SignUpState extends State<SignUp> {
         title: Text("Welcome On Board"),
         centerTitle: true,
       ),
-      backgroundColor: Colors.blue.shade100,
+      backgroundColor: Colors.white,
       body: ListView(
         padding: EdgeInsets.only(left: 70, right: 70),
         children: <Widget>[
           SizedBox(height: 120),
           CircleAvatar(
-            backgroundColor: Colors.blue.shade100,
+            backgroundColor: Colors.white,
             radius: 60,
             child: Image.asset(
               "assets/login.png",
@@ -66,15 +66,12 @@ class _SignUpState extends State<SignUp> {
                 "Password", Icon(Icons.enhanced_encryption_rounded)),
           ),
           SizedBox(height: 10),
-          FlatButton(
-            color: Colors.white,
+          IconButton(
+            icon: Icon(Icons.login),
+            iconSize: 40,
             onPressed: () => signup(
                 _email.text.toString().trim(), _pwd.text.toString().trim()),
-            child: Text(
-              "Sign Up",
-              style: TextStyle(color: Colors.black),
             ),
-          )
         ],
       ),
     );
