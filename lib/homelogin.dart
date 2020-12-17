@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(
             "Login",
-            style: TextStyle(fontSize: 25, letterSpacing: 1),
+            style: TextStyle(fontSize: 25,),
           ),
           centerTitle: true,
         ),
@@ -49,16 +49,16 @@ class _HomePageState extends State<HomePage> {
         body: ListView(
           padding: EdgeInsets.only(left: 70, right: 70),
           children: <Widget>[
-            SizedBox(height: 100),
+            SizedBox(height: 140),
             CircleAvatar(
               backgroundColor: Colors.white,
-              radius: 54,
+              radius: 53,
               child: Image.asset(
                 "assets/login.png",
                 fit: BoxFit.contain,
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 55),
             TextField(
               textAlign: TextAlign.center,
               autofocus: true,
@@ -77,10 +77,10 @@ class _HomePageState extends State<HomePage> {
               decoration: buildBorder(
                   "Password", Icon(Icons.enhanced_encryption_rounded)),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             IconButton(
-              color: Colors.lightBlue.shade800,
-              icon: Icon(Icons.exit_to_app_rounded, size: 50),
+              color: Colors.black,
+              icon: Icon(Icons.exit_to_app_rounded, size: 45),
               onPressed: () => firebaseLogin(
                   _email.text.toString().trim(), _pwd.text.toString().trim()),
             ),
@@ -89,9 +89,8 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
               "New User?",
               style: TextStyle(
-                letterSpacing: 1.5,
                 color: Colors.black,
-                fontSize: 17,
+                fontSize: 16,
               ),
             )),
             SizedBox(height: 10,),
@@ -99,7 +98,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () => Navigator.push(
                   context, MaterialPageRoute(builder: (context) => SignUp())),
               child: Text(" Sign Up",textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.purple,fontSize: 18,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.purple,fontSize: 16,fontWeight: FontWeight.bold),
               ),
             )
           ],
