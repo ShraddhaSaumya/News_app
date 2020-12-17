@@ -38,16 +38,16 @@ class _SignUpState extends State<SignUp> {
       body: ListView(
         padding: EdgeInsets.only(left: 70, right: 70),
         children: <Widget>[
-          SizedBox(height: 120),
+          SizedBox(height: 140),
           CircleAvatar(
             backgroundColor: Colors.white,
-            radius: 60,
+            radius: 53,
             child: Image.asset(
               "assets/login.png",
               fit: BoxFit.contain,
             ),
           ),
-          SizedBox(height: 60),
+          SizedBox(height: 55),
           TextField(
             autofocus: true,
             cursorHeight: 21,
@@ -65,7 +65,7 @@ class _SignUpState extends State<SignUp> {
             decoration: buildBorder(
                 "Password", Icon(Icons.enhanced_encryption_rounded)),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           IconButton(
             icon: Icon(Icons.login),
             iconSize: 40,
