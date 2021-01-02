@@ -58,6 +58,16 @@ class _SignUpState extends State<SignUp> {
           SizedBox(height: 20),
           TextField(
             cursorHeight: 21,
+            controller: _email,
+            cursorWidth: 2,
+            keyboardType: TextInputType.emailAddress,
+            obscureText: true,
+            decoration: buildBorder(
+                "Email id", Icon(Icons.email)),
+          ),
+          SizedBox(height: 20),
+          TextField(
+            cursorHeight: 21,
             cursorWidth: 2,
             controller: _pwd,
             keyboardType: TextInputType.visiblePassword,
@@ -65,14 +75,17 @@ class _SignUpState extends State<SignUp> {
             decoration: buildBorder(
                 "Password", Icon(Icons.enhanced_encryption_rounded)),
           ),
-          SizedBox(height: 20),
-          IconButton(
-            icon: Icon(Icons.login),
-            iconSize: 40,
-            onPressed: () => signup(
+          SizedBox(height:20),
+          RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        onPressed: () => signup(
                 _email.text.toString().trim(), _pwd.text.toString().trim()),
-            ),
-        ],
+        padding: EdgeInsets.all(12),
+        color: Colors.blue,
+        child: Text('Sign Up', style: TextStyle(color: Colors.white)),
+      ),],
       ),
     );
   }

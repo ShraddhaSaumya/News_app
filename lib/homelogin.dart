@@ -41,7 +41,9 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(
             "Login",
-            style: TextStyle(fontSize: 25,),
+            style: TextStyle(
+              fontSize: 25,
+            ),
           ),
           centerTitle: true,
         ),
@@ -59,9 +61,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 55),
-            TextField(
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
               textAlign: TextAlign.center,
-              autofocus: true,
+              autofocus: false,
               cursorHeight: 21,
               cursorWidth: 2,
               decoration: buildBorder("Email id", Icon(Icons.email_rounded)),
@@ -78,27 +81,29 @@ class _HomePageState extends State<HomePage> {
                   "Password", Icon(Icons.enhanced_encryption_rounded)),
             ),
             SizedBox(height: 20),
-            IconButton(
-              color: Colors.black,
-              icon: Icon(Icons.exit_to_app_rounded, size: 45),
-              onPressed: () => firebaseLogin(
-                  _email.text.toString().trim(), _pwd.text.toString().trim()),
+            RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                onPressed: () => firebaseLogin(
+                    _email.text.toString().trim(), _pwd.text.toString().trim()),
+                padding: EdgeInsets.all(12),
+                color: Colors.blue,
+                child: Text('Log In', style: TextStyle(color: Colors.white)),
             ),
-            SizedBox(height: 40,),
-            Center(
-                child: Text(
-              "New User?",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 16,
-              ),
-            )),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 40,
+            ),
             GestureDetector(
               onTap: () => Navigator.push(
                   context, MaterialPageRoute(builder: (context) => SignUp())),
-              child: Text(" Sign Up",textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.purple,fontSize: 16,fontWeight: FontWeight.bold),
+              child: Text(
+                "New User? Sign Up!",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.purple[600],
+                    fontSize: 17,
+                ),
               ),
             )
           ],
@@ -112,6 +117,6 @@ class _HomePageState extends State<HomePage> {
         contentPadding: EdgeInsets.only(left: 25),
         hintText: h,
         suffixIcon: i,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)));
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)));
   }
 }

@@ -31,12 +31,12 @@ class _NewsState extends State<News> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage("assets/Classified.jpg"), context);
     var apiRes;
     String u;
     Future<List<dynamic>> getApi(String url) async {
-      u = url;
       var response = await http
-          .get(u, headers: {"X-Api-Key": "d0a6829cf6a64fda8651bf2e8052fc11"});
+          .get(url, headers: {"X-Api-Key": "d0a6829cf6a64fda8651bf2e8052fc11"});
       var _json = json.decode(response.body);
       apiRes = _json["articles"];
       len = apiRes.length;
@@ -90,17 +90,20 @@ class _NewsState extends State<News> with SingleTickerProviderStateMixin {
                 return _apiWidget(snapshot);
               }),
           FutureBuilder(
-              future: getApi("http://newsapi.org/v2/top-headlines?country=in&category=business"),
+              future: getApi(
+                  "http://newsapi.org/v2/top-headlines?country=in&category=business"),
               builder: (context, snapshot) {
                 return _apiWidget(snapshot);
               }),
           FutureBuilder(
-              future: getApi("http://newsapi.org/v2/top-headlines?country=us&category=science"),
+              future: getApi(
+                  "http://newsapi.org/v2/top-headlines?country=us&category=science"),
               builder: (context, snapshot) {
                 return _apiWidget(snapshot);
               }),
           FutureBuilder(
-              future: getApi("http://newsapi.org/v2/top-headlines?country=in&category=technology"),
+              future: getApi(
+                  "http://newsapi.org/v2/top-headlines?country=in&category=technology"),
               builder: (context, snapshot) {
                 return _apiWidget(snapshot);
               }),
@@ -117,8 +120,7 @@ Widget _apiWidget(AsyncSnapshot snapshot) {
     return ListView.builder(
       itemBuilder: (context, index) {
         return Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           shadowColor: Colors.blue[800],
           elevation: 11,
           child: ListTile(
@@ -141,12 +143,9 @@ Widget _apiWidget(AsyncSnapshot snapshot) {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
-                   // fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
-                  height:7
-                ),
+                SizedBox(height: 7),
                 Text(
                   data[index]["description"] == null
                       ? "Tap for more info."
@@ -155,9 +154,7 @@ Widget _apiWidget(AsyncSnapshot snapshot) {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                 ),
-                SizedBox(
-                  height:3
-                ),
+                SizedBox(height: 3),
               ],
             ),
           ),
